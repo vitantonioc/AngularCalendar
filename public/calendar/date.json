@@ -1,0 +1,29 @@
+
+[
+      {
+        "id": 1,
+        "title": "Primer evento: Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "start": 1486549883000,
+        "url": "#modal1"
+      },
+      {
+        "id": 2,
+        "title": "Segundo evento",
+        "start": 1486636283000,
+        "url": "#modal1"
+      },
+      { 
+        "id": 3,
+      	"title": "Tercer evento",
+        "start": 1486636283000,
+        "end": 1486204283000,
+        "url": "#modal1"
+      },
+      {
+        "id": 4,
+        "title": "Evento con click google : dirigido a la web de Google",
+        "start": 1487241083000,
+        "end": 1487413883000,
+        "url": "#modal1"
+      }
+    ]
