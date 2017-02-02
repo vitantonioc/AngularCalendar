@@ -8,11 +8,11 @@
 - Font Awesome
 - Json data 
 
-Install:
+<h3>Install</h3>:
 - npm install
 - gulp default
 
-Browser:
+<h3>Browser</h3>:
 localhost:7000
 
 ![alt tag](https://github.com/vitantonioc/AngularCalendar/blob/master/1.jpg)
