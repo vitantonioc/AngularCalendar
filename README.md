@@ -6,6 +6,7 @@ AngularCalendar
 - Bootstrap
 - Materialize
 - Font Awesome
+- Json data 
 
 Install:
 npm install
