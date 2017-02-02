@@ -9,11 +9,13 @@ AngularCalendar
 - Json data 
 
 Install:
-npm install
-gulp default
+- npm install
+- gulp default
 
 Browser:
 localhost:7000
+
+
 
 
 
