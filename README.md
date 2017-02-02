@@ -1,6 +1,6 @@
 
 
-AngularCalendar
+<h2>AngularCalendar</h2>
 - Angular 1.6
 - Fullcalendar
 - Bootstrap
