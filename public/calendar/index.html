@@ -1,67 +1,105 @@
-  <!DOCTYPE html>
-  <html lang="en" ng-app="calendarDemoApp" id="top">
-  <head>
+<!DOCTYPE html>
+<html lang="en" ng-app="calendarDemoApp" id="top">
+<head>
     <title>AngularUI Calendar for AngularJS</title>
     <link rel="icon" href="favicon.ico" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.css">
-
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="calendarDemo.css" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <script src="   https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/locale/es.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/gcal.js"></script>
+
     <script src="calendar.js"></script>
     <script src="calendarDemo.js"></script>
-  </head>
-  <body data-spy="scroll">
-   <div role="main">
-      <div class="container">
+</head>
+<body data-spy="scroll">
+
+ 
+<div role="main">
+    <div class="container">
         <section id="directives-calendar" ng-controller="CalendarCtrl">
+         
+            <div class="well">   
+                <div class="row-fluid">
+                   
+                  <div class="span12">
+                        <tabset>
+                            
+                            <tab select="renderCalendar('myCalendar1');">
+                           
+                             <h3><i class="fa fa-calendar" aria-hidden="true"></i></h3>
+                              <div class="btn-toolbar">                              
+                                <div class="btn-group">
+                                    <button class="waves-effect waves-light btn" ng-click="changeView('agendaDay', 'myCalendar1')">Día</button>
+                                    <button class="waves-effect waves-light btn" ng-click="changeView('agendaWeek', 'myCalendar1')">Semana</button>
+                                    <button class="waves-effect waves-light btn" ng-click="changeView('month', 'myCalendar1')">Mes</button>
+                                </div>
+                              </div>
+                            <div class="calendar" ng-model="eventSources" calendar="myCalendar1" ui-calendar="uiConfig.calendar"></div>
+                           </tab>
 
-          <div class="well">   
-            <div class="row-fluid">
+                         
 
-              <div class="span12">
-                <tabset>
+                          <!-- <tab select="renderCalendar('myCalendar2');">
+                          <br><br><br>
+                              <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+                                <h4>{{alertMessage}}</h4>
+                              </div>
+                              <div class="btn-toolbar">                               
+                                <div class="btn-group">
+                                    <button class="waves-effect waves-light btn" ng-click="changeView('agendaDay', 'myCalendar2')">AgendaDay</button>
+                                    <button class="waves-effect waves-light btn" ng-click="changeView('agendaWeek', 'myCalendar2')">AgendaWeek</button>
+                                    <button class="waves-effect waves-light btn" ng-click="changeView('month', 'myCalendar2')">Month</button>
+                                </div>
+                              </div>
+                            <div class="calendar" ng-model="eventSources" calendar="myCalendar2" ui-calendar="uiConfig.calendar"></div>
+                           </tab>
 
-                  <tab select="renderCalendar('myCalendar1');">
-                    <div class="btn-toolbar">                              
-                      <div class="btn-group">
-                        <button class="waves-effect waves-light btn" ng-click="changeView('agendaDay', 'myCalendar1')">Día</button>
-                        <button class="waves-effect waves-light btn" ng-click="changeView('agendaWeek', 'myCalendar1')">Semana</button>
-                        <button class="waves-effect waves-light btn" ng-click="changeView('month', 'myCalendar1')">Mes</button>
-                      </div>
+                           <tab select="renderCalendar('myCalendar3');">
+                          
+                              <br><br><br>
+                              <div class="btn-toolbar">                              
+                                <div class="btn-group">
+                                    <button class="btn btn-success" ng-click="changeView('agendaDay', 'myCalendar3')">AgendaDay</button>
+                                    <button class="btn btn-success" ng-click="changeView('agendaWeek', 'myCalendar3')">AgendaWeek</button>
+                                    <button class="btn btn-success" ng-click="changeView('month', 'myCalendar3')">Month</button>
+                                </div>
+                              </div>
+                            <div class="calendar" ng-model="eventSources2" calendar="myCalendar3" ui-calendar="uiConfig.calendar"></div>
+                           </tab> -->
+
+                        </tabset>
                     </div>
-                    <div class="calendar" ng-model="eventSources" calendar="myCalendar1" ui-calendar="uiConfig.calendar"></div>
-                  </tab>
-
-                </tabset>
-              </div>
+                </div>
             </div>
-          </div>
-          <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4 class="TituloEvento"><i class="fa fa-calendar" aria-hidden="true"></i>Evento</h4>
-      <p ng-bind="events[0].title" class="texto"></p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
-    </div>
-
+            <div ng-repeat="item in events">
+           <div id="modal{{item.id}}" class="modal modal-fixed-footer" >
+                  <div class="modal-content">
+                    <div class="backTitleModal"> 
+                      <h4 class="titModale" ng-bind="item.title"></h4>
+                    </div>
+                    <p class="textModal" ng-bind="item.texto"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
+                  </div>
+                </div>
+                </div>
         </section>
-      </div>
-    </div>     
-<!-- Modal Structure -->
-  
-  </div>
-  </body>
-  </html>
+    </div>
+</div>     
+
+    </body>
+</html>
