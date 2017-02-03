@@ -1,7 +1,7 @@
 {
   "name": "AngularCalendar",
   "version": "0.0.1",
-  "description": "",
+  "description": "Angular1.6 Calendar",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "email": "vitantonio@gmail.com",
     "url": "http://visualcode.eu"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.8.2"
   },
