@@ -49,37 +49,6 @@
                               </div>
                             <div class="calendar" ng-model="eventSources" calendar="myCalendar1" ui-calendar="uiConfig.calendar"></div>
                            </tab>
-
-                         
-
-                          <!-- <tab select="renderCalendar('myCalendar2');">
-                          <br><br><br>
-                              <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
-                                <h4>{{alertMessage}}</h4>
-                              </div>
-                              <div class="btn-toolbar">                               
-                                <div class="btn-group">
-                                    <button class="waves-effect waves-light btn" ng-click="changeView('agendaDay', 'myCalendar2')">AgendaDay</button>
-                                    <button class="waves-effect waves-light btn" ng-click="changeView('agendaWeek', 'myCalendar2')">AgendaWeek</button>
-                                    <button class="waves-effect waves-light btn" ng-click="changeView('month', 'myCalendar2')">Month</button>
-                                </div>
-                              </div>
-                            <div class="calendar" ng-model="eventSources" calendar="myCalendar2" ui-calendar="uiConfig.calendar"></div>
-                           </tab>
-
-                           <tab select="renderCalendar('myCalendar3');">
-                          
-                              <br><br><br>
-                              <div class="btn-toolbar">                              
-                                <div class="btn-group">
-                                    <button class="btn btn-success" ng-click="changeView('agendaDay', 'myCalendar3')">AgendaDay</button>
-                                    <button class="btn btn-success" ng-click="changeView('agendaWeek', 'myCalendar3')">AgendaWeek</button>
-                                    <button class="btn btn-success" ng-click="changeView('month', 'myCalendar3')">Month</button>
-                                </div>
-                              </div>
-                            <div class="calendar" ng-model="eventSources2" calendar="myCalendar3" ui-calendar="uiConfig.calendar"></div>
-                           </tab> -->
-
                         </tabset>
                     </div>
                 </div>
@@ -91,6 +60,7 @@
                       <h4 class="titModale" ng-bind="item.title"></h4>
                     </div>
                     <p class="textModal" ng-bind="item.texto"></p>
+                    <div><a ng-href="item.link" title="{{item.title}}"> <p class="textModal" ng-bind="item.link"></p></a></div>
                   </div>
                   <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
