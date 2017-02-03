@@ -9,7 +9,8 @@ var calendarDemoApp = angular.module('calendarDemoApp', ['ui.calendar', 'ui.boot
             getData: function () {
                 return $http({
                     method: 'GET',
-                    url: 'date.json'
+                    //url: 'date.json'
+                  url: 'public/calendar/date.json'
                 });
             }
         }
