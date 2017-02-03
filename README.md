@@ -10,6 +10,8 @@
 
 <h3>Install:</h3>
 - npm install
+
+<h3>Run:</h3>
 - gulp default
 
 <h3>Browser</h3>
