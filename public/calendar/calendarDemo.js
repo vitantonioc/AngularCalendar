@@ -128,7 +128,14 @@ function callAtInterval() {
             isRTL: true
         });
          $('.modal').modal();
+  $(function(){
 
+          $(document).on('click','.fc-event',function(){               
+             $('.modal').modal(); 
+
+            });
+         
+        })
 
     });
 
